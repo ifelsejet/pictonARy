@@ -3,6 +3,7 @@ using System.Linq;
 using DilmerGames.Core.Singletons;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ARDebugManager : Singleton<ARDebugManager>
 {   
@@ -47,4 +48,9 @@ public class ARDebugManager : Singleton<ARDebugManager>
             debugAreaText.text = string.Empty;
         }
     }
+
+    public void GoToMainMenu()
+	{
+		SceneManager.LoadScene("MainMenu");
+	}
 }
